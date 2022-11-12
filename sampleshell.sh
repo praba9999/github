@@ -1,4 +1,1 @@
-#!/bin/#!/usr/bin/env bash
-MEMORY=$(free -m | awk 'NR==2{printf "%.2f%%\t\t", $3*100/$2 }')
-DISK=$(df -h | awk '$NF=="/"{printf "%s\t\t", $5}')
-CPU=$(top -bn1 | grep load | awk '{printf "%.2f%%\t\t\n", $(NF-2)}')
+(ps hax -o rss,user | awk '{a[$2]+=$1;}END{for(i in a)print i" "int(a[i]/1024+0.5);}' | sort -rnk2)
