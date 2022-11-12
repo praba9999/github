@@ -22,7 +22,7 @@ spec:
           image: jenkins/jenkins:lts
           resources:
             limits:
-              memory: "2Gi"
+              memory: "3Gi"
               cpu: "1000m"
             requests:
               memory: "500Mi"
